@@ -1,0 +1,213 @@
+
+/* Navbar styles */
+header {
+    position:sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.logo {
+    position:sticky;
+    font-size: 24px;
+    font-weight: bold;
+    color: #007bff; /* Blue color for LIVEINTECH */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav li a, .pitch-button {
+    color: #000; /* Default color for links */
+    text-decoration: none;
+}
+
+.pitch-button {
+    background-color: #007bff; /* Blue color for PITCH button */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Page 1 styles */
+.page1 {
+    position: relative; /* Ensure .page1 is a positioning context */
+    height: 100vh; /* Ensures section covers the viewport height */
+    background-image: url('/assets/home-banner.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Fix the background image to the viewport */
+    display: flex;
+    justify-content: flex-end; /* Align content to the right */
+    align-items: center; /* Center content vertically */
+    padding-right: 50px; /* Add padding to the right */
+}
+
+.page1 .content {
+    position: relative; /* Ensure content is placed relative to .page1 */
+    z-index: 2; /* Content is above the background */
+    padding: 20px; /* Adjust padding as needed */
+    max-width: 50%; /* Limit content width */
+}
+
+.page1 .background-image-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: flex-end;
+    overflow: hidden;
+    z-index: -1; /* Ensure background image is behind the navbar */
+}
+
+
+.page1 .background-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.page1 .content-inner {
+    text-align: right; /* Align content to the right */
+}
+
+.page1 h1.grey-text {
+    color: #080808; /* Grey color for OPERATIONAL */
+    font-size: 70px;
+}
+
+.page1 p {
+    color: #ffffff; /* White color for text */
+}
+
+.page2 {
+    position: relative; /* Ensure .page2 is a positioning context */
+    height: 100vh; /* Ensures section covers the viewport height */
+    display: flex;
+    justify-content: space-between; /* Distribute items evenly */
+    align-items: center; /* Center items vertically */
+    padding: 20px;
+}
+
+.page2 .content {
+    display: flex;
+    justify-content: space-between; /* Distribute items evenly */
+    align-items: center; /* Center items vertically */
+    width: 100%;
+}
+
+.page2 .text-content {
+    max-width: 50%; /* Limit text content width */
+}
+
+.page2 .highlight {
+    color: #007bff; /* Blue color for ICONIC */
+    text-decoration: underline; /* Underline for ICONIC */
+}
+
+.page2 .video-container {
+    position:absolute; /* Ensure video container is a positioning context */
+    width: 240%; /* Limit video container width */
+    height: 100%; /* Ensure video container covers the viewport height */
+    overflow: hidden; /* Crop the video to the container */
+    text-align:center; /* Align video to the right */
+    z-index: -1;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.page2 .video-container video {
+    position: absolute; /* Position video absolutely */
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%; /* Ensure video takes the full width of its container */
+    height: 100%; /* Ensure video takes the full height of its container */
+    object-fit:cover; /* Cover the container */
+}
+
+.page3 {
+    position: relative; /* Ensure .page2 is a positioning context */
+    height: 100vh; /* Ensures section covers the viewport height */
+    display: flex;
+    justify-content: space-between; /* Distribute items evenly */
+    align-items: center; /* Center items vertically */
+    padding: 20px;
+}
+
+.page3 .content {
+    display: flex;
+    justify-content: space-between; /* Distribute items evenly */
+    align-items: center; /* Center items vertically */
+    width: 100%;
+}
+
+.page3 .text-content {
+    max-width: 50%; /* Limit text content width */
+}
+
+.page3 .highlight {
+    color: #007bff; /* Blue color for ICONIC */
+    text-decoration: underline; /* Underline for ICONIC */
+}
+
+.page3 .video-container {
+    position: relative; /* Ensure video container is a positioning context */
+    width: 50%; /* Limit video container width */
+    height: 100%; /* Ensure video container covers the viewport height */
+    overflow: hidden; /* Crop the video to the container */
+    text-align: right; /* Align video to the right */
+}
+
+.page3 .video-container video {
+    position: absolute; /* Position video absolutely */
+    top: 0;
+    left: 0;
+    width: 100%; /* Ensure video takes the full width of its container */
+    height: 100%; /* Ensure video takes the full height of its container */
+    object-fit: cover; /* Cover the container */
+}
+
+
+/* Hide the video container on the first page */
+.page1 .video-container {
+    display: none;
+}
+
+.page-piling-container {
+    height: calc(100% - 10vh);
+    overflow: auto;
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top:0;
+    left: 0
+}
+
+.section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+}
+

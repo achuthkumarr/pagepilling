@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LiveInTech</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+<body>
+    <header>
+        <div class="logo">LIVEINTECH</div>
+        <nav class="navbar">
+            <div class="container-fluid">
+                <ul *ngFor="let child of sections">
+                    <li class="child"><a href="javascript:void(0)" (click)="scrollToSpecificSection(child.id)"style="color: #000;">{{child.value}}</a></li>
+                  </ul> 
+            </div>
+        </nav>            
+    </header>
+    <main>
+        <div class="page-piling-container">
+            <div class="section" *ngFor="let sec of sections" [id]="'section'+sec.id">
+                <div class="page1" *ngIf = "sec.id===1">
+                    <div class="background-image-container">
+                        <img src="home-banner.jpg" alt="Operational Partner Image" class="background-image">
+                    </div>
+                    <div class="content">
+                        <div class="content-inner">
+                            <h1 class="grey-text"><b>OPERATIONAL</b></h1>
+                            <h1><span  id="word-carousel" style="font-weight: bold;font-size: 50px;color: #6f36f4;"
+                                [@fadeAnimation]="toogle" (@fadeAnimation.done)="nextWord($event)">{{wordCarousel[wordCounter]}}</span></h1>
+                            <p style="font-size: 20px;color: #0c0c0c;">
+                                We collaborate with exceptional 
+                                <a href="#">'Entrepreneurs'</a> and <a href="#">'Intrapreneurs'</a> to bring meaningful ideas to reality. 
+                                We encourage collaboration through validation, talent, resources, and investment.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="page2" *ngIf = "sec.id===2">
+                    
+                    <div class="content">
+                        <div class="text-content">
+                            <h1><b>TOGETHER FROM IDEA TO <span class="highlight">ICONIC</span></b></h1>
+                            <p style="font-size: 20px;color: #0c0c0c;">
+                                We believe in an outcome-driven process to test assumptions, eliminate confirmation biases, and operate with passion.
+                                We reduce a process that could take years to months. We ensure that you are pursuing the right market, that you are fully validated,
+                                and that you are surrounded by incredible teammates.
+                            </p>
+                        </div>
+                        <div class="video-container">
+                            <img src="/assets/2.png" alt="Operational Partner Image" > 
+                        </div>
+                    </div>
+                </div>
+                <div class="page3" *ngIf = "sec.id===3">
+                    <div class="content">
+                        <div class="text-content">
+                            <h1><b>COCREATE & COINVEST</b></h1>
+                            <p style="font-size: 20px;color: #0c0c0c;">
+                                We provide a streamlined risk-reward framework for co-creation, encompassing validation, 
+                                solutioning, risk mitigation, and capability-capitalTM, so that entrepreneurs may focus on product and market fit.
+                            </p>
+                        </div>
+                        <div class="video-container">
+                            <video id="videoPlayer" autoplay muted loop>
+                                <source src="whystudio_video.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
+
+
+
+
+
+
