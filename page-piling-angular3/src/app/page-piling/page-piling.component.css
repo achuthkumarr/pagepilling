@@ -210,4 +210,62 @@ nav li a, .pitch-button {
     justify-content: center;
     font-size: 2rem;
 }
+.stats {
+    display: flex;
+    justify-content: space-around;
+    background-color: #f9f9f9;
+    padding: 20px 0;
+}
 
+.stat {
+    flex: 1;
+}
+
+.stat h2 {
+    margin: 0;
+    font-size: 2em;
+    color: #333;
+}
+
+.stat p {
+    margin: 5px 0 0;
+    color: #666;
+}
+
+.focused-tracks {
+    background-color: #fff;
+    padding: 40px 0;
+}
+
+.focused-tracks h2 {
+    margin: 0;
+    font-size: 2.5em;
+    color: #333;
+}
+
+.focused-tracks span {
+    color: #1a73e8;
+}
+
+.web3-dlt {
+    background-color: #f0f8ff;
+    padding: 40px 20px;
+}
+
+.web3-dlt h3 {
+    margin: 0;
+    font-size: 2em;
+    color: #333;
+}
+
+.web3-dlt .subheading {
+    color: #1a73e8;
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+
+.web3-dlt p {
+    margin: 10px 0 0;
+    color: #666;
+    font-size: 1em;
+}
